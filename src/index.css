@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary-black: #09090b;
+    --color-primary-white: #ffffff;
+    --color-accent-red: #dc2626;
+    --color-accent-darkblue: #1e3a8a;
+    --color-accent-navy: #0f172a;
+  }
+
+  body {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    background-color: #fcfcfc;
+    color: #09090b;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-street {
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a1a1aa;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Streetwear Shadows & Glows */
+.glow-red {
+  box-shadow: 0 0 25px -4px rgba(220, 38, 38, 0.35);
+}
+
+.glow-darkblue {
+  box-shadow: 0 0 25px -4px rgba(30, 58, 138, 0.4);
+}
+
+.glow-black {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25);
+}
+
+/* Text and accent styling */
+.text-stroke-black {
+  -webkit-text-stroke: 1.5px #09090b;
+  color: transparent;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1.5px #ffffff;
+  color: transparent;
+}
+
+.bg-urban-pattern {
+  background-image: radial-gradient(#d4d4d8 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+

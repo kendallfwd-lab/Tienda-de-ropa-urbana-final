@@ -1,0 +1,6 @@
+{
+  "name": "Leslie Store - Streetwear & Urban Fashion",
+  "description": "Tienda de ropa urbana y streetwear exclusivo en El Roble, Puntarenas. Incluye panel administrativo con base de datos en tiempo real (Firestore) para gestionar productos, videos de TikTok y exportación de catálogo para Shopify.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
