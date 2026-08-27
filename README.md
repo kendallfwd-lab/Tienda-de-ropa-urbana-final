@@ -151,74 +151,9 @@ Crea un archivo .env local si necesitas configurar esa integración.
 
 npm run dev
 
-6. Arquitectura del proyecto
-
- 
-
-Tienda-de-ropa-urbana-final/
-├── public/
-│   └── images/
-│       ├── hero.webp
-│       ├── neon-face.webp
-│       ├── hoodie-1977.webp
-│       └── ...
-│
-├── src/
-│   ├── components/
-│   │   ├── admin/
-│   │   │   ├── AdminCategories.tsx
-│   │   │   ├── AdminCustomers.tsx
-│   │   │   ├── AdminDashboard.tsx
-│   │   │   ├── AdminInventory.tsx
-│   │   │   ├── AdminOrders.tsx
-│   │   │   ├── AdminProducts.tsx
-│   │   │   ├── AdminStoreSettings.tsx
-│   │   │   ├── AdminTrash.tsx
-│   │   │   └── ConfirmDeleteModal.tsx
-│   │   │
-│   │   ├── AdminLoginModal.tsx
-│   │   ├── AdminPanelModal.tsx
-│   │   ├── BrandMarquee.tsx
-│   │   ├── CartDrawer.tsx
-│   │   ├── CombosSection.tsx
-│   │   ├── FloatingWhatsApp.tsx
-│   │   ├── Footer.tsx
-│   │   ├── HeroBanner.tsx
-│   │   ├── Navbar.tsx
-│   │   ├── OrderSection.tsx
-│   │   ├── OutfitBuilder.tsx
-│   │   ├── ProductCatalog.tsx
-│   │   ├── ProductDetailModal.tsx
-│   │   ├── ReviewsSection.tsx
-│   │   ├── SizeAdvisorModal.tsx
-│   │   ├── StoreInfoSection.tsx
-│   │   ├── TikTokShowcase.tsx
-│   │   └── WolfLogo.tsx
-│   │
-│   ├── data/
-│   │   └── storeData.ts
-│   │
-│   ├── lib/
-│   │   ├── authService.ts
-│   │   ├── firebase.ts
-│   │   └── storeService.ts
-│   │
-│   ├── App.tsx
-│   ├── index.css
-│   ├── main.tsx
-│   └── types.ts
-│
-├── .env.example
-├── .gitignore
-├── firebase-applet-config.json
-├── firestore.rules
-├── index.html
-├── package.json
-└── README.md
-
 
    
-7. Componentes principales
+6. Componentes principales
 
 App.tsx
 
@@ -264,7 +199,7 @@ AdminPanelModal.tsx
 
 Funciona como contenedor de los módulos administrativos.
 
-8. Modelo de datos
+7. Modelo de datos
 
 Los tipos principales están definidos en src/types.ts.
 
@@ -345,7 +280,7 @@ Category
 
 Representa las categorías dinámicas del catálogo y soporta estado activo y papelera.
 
-9. Persistencia de datos
+8. Persistencia de datos
 
 La capa src/lib/storeService.ts implementa una estrategia híbrida.
 
@@ -395,7 +330,7 @@ storeService.ts
 
 Si Firestore falla, varios métodos recuperan o conservan la información desde el almacenamiento local.
 
-10. Firebase
+9. Firebase
 
 La inicialización se encuentra en:
 
@@ -419,7 +354,7 @@ firebase-applet-config.json
 
 Antes de una publicación real, se recomienda revisar que el archivo no contenga información que deba tratarse como privada y confirmar que las reglas de Firestore sean adecuadas para producción.
 
-11. Autenticación administrativa
+10. Autenticación administrativa
 
 La lógica se encuentra en:
 
@@ -445,7 +380,7 @@ Recomendación para producción
 
 No utilizar almacenamiento local como autoridad definitiva de seguridad. En una versión productiva, la autenticación y autorización deben validarse en un backend confiable o mediante reglas/claims de Firebase correctamente configuradas.
 
-12. Catálogo inicial
+11. Catálogo inicial
 
 Los datos iniciales de la tienda se encuentran en:
 
@@ -469,7 +404,7 @@ Las imágenes se encuentran en:
 
 public/images/
 
-13. Flujo del carrito
+12. Flujo del carrito
 
 El carrito se mantiene en el estado de React y se sincroniza automáticamente con:
 
@@ -489,7 +424,7 @@ vaciar carrito;
 
 continuar al pedido.
 
-14. Flujo de compra por WhatsApp
+13. Flujo de compra por WhatsApp
 
 La aplicación puede construir un mensaje con:
 
@@ -505,7 +440,7 @@ total estimado.
 
 El mensaje es codificado y enviado al enlace de WhatsApp configurado para la tienda.
 
-15. Convenciones recomendadas para Git
+14. Convenciones recomendadas para Git
 
 Crear rama
 
@@ -532,7 +467,7 @@ refactor: simplify store service persistence
 style: improve responsive product cards
 docs: update project readme
 
-16. Checklist antes de hacer push
+15. Checklist antes de hacer push
 
 npm install
 npm run lint
@@ -551,7 +486,7 @@ que Firestore tenga reglas adecuadas;
 
 que las nuevas funciones funcionen también con recarga de página.
 
-17. Repositorio
+16. Repositorio
 
 https://github.com/kendallfwd-lab/Tienda-de-ropa-urbana-final
 
@@ -559,7 +494,7 @@ Rama principal detectada:
 
 main
 
-18. Estado técnico actual
+17. Estado técnico actual
 
 El repositorio contiene una base funcional de e-commerce con:
 
