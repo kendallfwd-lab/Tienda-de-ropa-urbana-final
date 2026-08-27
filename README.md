@@ -153,6 +153,8 @@ npm run dev
 
 6. Arquitectura del proyecto
 
+ 
+
 Tienda-de-ropa-urbana-final/
 ├── public/
 │   └── images/
@@ -214,6 +216,8 @@ Tienda-de-ropa-urbana-final/
 ├── package.json
 └── README.md
 
+
+   
 7. Componentes principales
 
 App.tsx
